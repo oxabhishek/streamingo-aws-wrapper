@@ -1,0 +1,29 @@
+{
+  "name": "streamingo-aws-wrapper",
+  "version": "0.0.1",
+  "description": "AWS Wrapper to ease the use of aws npm module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxabhishek/streamingo-aws-wrapper.git"
+  },
+  "keywords": [
+    "streamingo",
+    "aws",
+    "wrapper",
+    "npm",
+    "github"
+  ],
+  "author": "Abhishek Sharma,Shekhar KNVS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oxabhishek/streamingo-aws-wrapper/issues"
+  },
+  "homepage": "https://github.com/oxabhishek/streamingo-aws-wrapper#readme",
+  "dependencies": {
+    "aws-sdk": "^2.206.0"
+  }
+}
