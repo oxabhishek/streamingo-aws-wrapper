@@ -4,7 +4,11 @@
     AWS = require("aws-sdk"),
     S3 = new AWS.S3();
 
-  s3Operations.uploadObject = function (bucketName, s3FilePath, content, callback) {
+  s3Operations.uploadObject = function (bucketName, s3FilePath, content, contentType, callback) {
+
+    // if contentType is not present and instead callback is passed
+    callback = typeof contentType === "function" ? contentType : callback;
+    contentType = "binary/octet-stream";
 
     typeof callback === "function" || (callback = function () {});
 
@@ -23,7 +27,8 @@
     return S3.putObject({
       Bucket: bucketName,
       Key: s3FilePath,
-      Body: content
+      Body: content,
+      ContentType: contentType
     }, callback);
   };
 
