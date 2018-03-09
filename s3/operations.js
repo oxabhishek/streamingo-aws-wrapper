@@ -8,7 +8,9 @@
 
     // if contentType is not present and instead callback is passed
     callback = typeof contentType === "function" ? contentType : callback;
-    contentType = "binary/octet-stream";
+    if (callback === contentType) {
+      contentType = "binary/octet-stream";
+    }
 
     typeof callback === "function" || (callback = function () {});
 
